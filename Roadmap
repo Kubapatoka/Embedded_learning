@@ -1,0 +1,52 @@
+Source Links:
+https://www.youtube.com/watch?v=D7L1SmjQ3fo&t=61s&ab_channel=SanchitKulkarni
+
+
+
+1. C programming (closest to the hardware, energy efficient and very fast)
+ * volatile
+ * pointers
+ * manipulation 
+   - bit manipulation (AND, OR, XOR, NOT, left/right shift, bit toggling, bit masking) - tricks
+   - string manipulation
+   - pointer manipulation
+ * memory management
+  - memory leaks
+  - static vs. dynamic
+  - allocate and deallocate (malloc, calloc, realloc, free)
+ * stack vs. heap
+ * complete memory layout in c
+ * Arrays
+ * Linked lists (all operations: Traversal, Insertion, Reversal, deleting, sorting, Double linked list)
+ * Stack
+ * Queue
+ * Full youtube course: https://www.youtube.com/watch?v=rLf3jnHxSmU&list=PLBlnK6fEyqRggZZgYpPMUxdY1CYkZtARR&ab_channel=NesoAcademy
+ * Geeksforgeeks course: https://www.geeksforgeeks.org/c/c-programming-language/
+ * book C programming a modern approach - pdf
+
+
+2. RTOS Real Time Operating System
+ * Processes and threads
+ * Scheduling alghorithms
+ * Semaphores
+ * Context switching
+ * Memory managament
+ * Kernel Concepts
+ * Interrupts and ISR
+ * operating system course: https://www.youtube.com/watch?v=vBURTt97EkA&list=PLBlnK6fEyqRiVhbXDGLXDk_OQAeuVcp2O&ab_channel=NesoAcademy
+ * https://www.freertos.org/
+ * Chedar - realtime scheduling simulator
+ * book in pdf real time systems
+
+3. Digital Electronics
+ * PDF - DIGI_QS_FULL
+ * Nesco Academy: https://www.youtube.com/watch?v=M0mx8S05v60&list=PLBlnK6fEyqRjMH3mWf6kwqiTbT798eAOm&ab_channel=NesoAcademy
+
+4. Computer Architecture
+ * cache hit and miss
+ * cache coherence
+ * cache mapping techniques
+ * Nesco Academy: https://www.youtube.com/watch?v=Ol8D69VKX2k&list=PLBlnK6fEyqRgLLlzdgiTUKULKJPYc0A4q&ab_channel=NesoAcademy
+ * Basics Computer Architecture lectures: https://www.youtube.com/watch?v=uCOrNJzXcDU&list=PL1iLu2CSC9EWAo0ysorNI_nebwF6Rwkr0&ab_channel=SmrutiR.Sarangi
+
+5. Microcontrolers: TODO
