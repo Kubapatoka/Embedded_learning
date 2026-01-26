@@ -55,4 +55,53 @@ Initialization
     
     int var = 3;
 
+## Naming convention
+1. Combined from letters and digits
+2. Cannot start with digit
+3. Can contains underscore but a lot of system variables starts with underscore
+4. Case sensitive
+5. Special characters are not allowed
+6. Blanks and whitespaces are not allowed
+7. Do not use keywords (if, else, ...)
+
+
+# printf
+First argument is string. Next arguments are optional and the type is not specified.
+
+    printf("%d %d", v1, v2);
+
+%d - decimal value
+%u - unsigned decimal value
+%ld - long decimal
+%lu - long unsinged
+%lld - long long
+%llu - unsigned long long
+
+# Fundamental Data Types
+
+Example: 2 bytes (16 bits) 
+- unsigned 0 to $2^n -1$
+- signed $ - 2^{n-1}$ to $2^{n-1} -1$   <b>2's complements range</b>
+
+## Long and short dependence
+sizeof(short) <= sizeof(int) <= sizeof(long) <= sizeof(long long)
+
+sizeof is unary operator, not a function
+
+## Unsigned modifier
+decided if variable can be signed or not
+
+## Limits
+
+    #include<limits.h>
+
+    int main()
+    {
+        int var1 = INT_MIN;
+        int var2 = INT_MAX;
+        int var3 = UINT_MAX;
+        int v4 = SHRT_MIN;
+        int v5 = SHRT_MIN;
+        int v6 = USHRT_MAX; 
+    }
 
