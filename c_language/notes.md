@@ -398,6 +398,25 @@ it is just a separator.
 Comma operator returns the rightmost operand in the expression and it simply evaluates the rest of the operands and finally reject them. So variable c has value 8.
 This operator have the least precedence. So variable d has value 1. 
 
+# Conditionals (if, else, switch-case)
+
+Rules of switch-case:
+- you are not allowed to add duplicae cases
+- in switch should be only an expressions which results are integer constant values
+- float value is not allowed in case label
+- in case labels variable expressions are not allowed (macros are allowed)
+- default can be places anywhere inside switch and it will still get evaluated if no match is found
+- if after matching case is no break, all below cases will be evaluated
+
+# Loops
+Types
+- for 
+- while
+- do-while
+
+Control statements
+- break
+- continue
 
 # lvalue and rvalue
 
@@ -413,4 +432,25 @@ rvalue (right value): object that has no identifiable location in memory
     - it always matches <b>the longest</b> charaters sequence
 
 
+# Useful functions
 
+    #include<math.h>
+    double sqrt(double x); // square root
+    double ceil(double x); //
+    double floor(double x); //
+
+
+# Tricks
+
+## How to add two numbers without usage of + operator
+
+    int a,b;
+    while(b != 0)
+    {
+        sum = a^b;
+        carry = (a&b)<<1;
+        a = sum;
+        b = carry;
+    }
+
+    return a;
