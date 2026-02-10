@@ -190,6 +190,19 @@ Compiler first try to find a local variable, then it uses global if any local no
 
 Global variables are initialized by default to zero (0)
 
+## Static scoping (lexical scoping)
+Definition of the variable is resolved by searching its containing block or function. If that fails, then searching the outer containing block and so on. Last step is searching in global variables
+
+So searching is in one stack frame and in Initialized Data Segment (global variables)
+
+## Dynamic Scoping
+Definition of a variables is resolved by searching its contianing block and if not found, then searching its calling function and if still not found the the function which called that calling function will be searched and so on
+
+So searching is in all stack frames and in the end in the Initialized Data Segment (global variables)
+
+## C is static scoping
+Perl supports both static and dynamic scoping. Using keywords 'local' and 'my'
+
 # auto keyword
 
 auto means Automatic. Variable is destroyed in the end of scope. So there is no sense to use auto in simple data types.
@@ -264,6 +277,10 @@ Static variables are automatically initialized to 0.
 Static variable should be initialized by constant value.
 
 Static variable remains in memory even if it is declared within a block. Static variable can behave like global one only in file it is declared.
+
+# static functions
+
+functions in C are global by default. Static function is visible only in current file. Static functions are restricted to the files where they are declared.
 
 # Constants in C
 
@@ -365,6 +382,20 @@ Initalized data contains Global, extern, static, const global variables
 
 Uninitalized data contains unitialized global, static, const global variables
 
+## Stack (or call stack)
+
+* Stack is a container (memory segment) which holds some data
+* Data is retrieved in LIFO fashion
+* Two operations: push and pop
+* For each function we are in there is a frame on call stack (Activation Record)
+
+
+Activation Record is a portion of stack which is generally composed of 
+* Locals of the callee
+* Return address to the caller
+* Parameters of the callee 
+
+
 # Operators in C
 
 Arithmetic: +,  -,  *,  /,  %
@@ -430,6 +461,59 @@ rvalue (right value): object that has no identifiable location in memory
 1. Lexical analysis done by lexical analyzer (scanner)
     - scans whole source program and when it finds the meaningful sequence of characters (lexemes) then it converts it into a <b>token</b>
     - it always matches <b>the longest</b> charaters sequence
+
+
+# Functions 
+
+## Function declaration (prototype)
+
+It means declaring the properties of a function to the compiler
+
+Properties:
+- Name of function
+- Return type function
+- Number of parameters
+- type of parameter 1.
+- type of parameter 2.
+-
+
+
+    int add(int , int);
+
+Declaring function before using it is not necessary but is preffered.
+
+Function definition consists block of code where function is defined.
+
+    int add(int a, int b)
+    {
+        return a+b;
+    }
+
+## Argument vs Parameter
+
+Parameter is a variable in the declaration and definition of the function.
+
+Argument is the actual value of the parameter that gets passed to the function.
+
+## Passing by value vs by Reference
+
+By Value - Values are copied (parameter and argument are in different memory locations).
+
+By reference - both acutal and formal params refers to the same memory location. Instead of passing values we are passing adresses.
+
+    int fun(int *p, int *q)
+    {
+        *p = 15;
+        *q = 25;
+    }
+
+    int x = 10;
+    int y = 20;
+    fun(&x, &y);
+
+    // now x is 15 and y is 25;
+
+
 
 
 # Useful functions
