@@ -523,6 +523,17 @@ By reference - both acutal and formal params refers to the same memory location.
     double ceil(double x); //
     double floor(double x); //
 
+# Recursion
+
+## Types
+- Direct recursion
+    - Function is direct recursive if it calls the same function again
+- Indirect recursion
+    - Function is indirect recursive if it calls another function which calls the function directly or indirectly
+- Tail recursion
+    - Function is tail recursive if the recursive call is the last thing done by the function. There is no need to keep record of the previous state
+- Non-tail recursion
+    - Function is non-tail recursive if the recursive call is not the last thing done by the function. After returning back, there is something left to evaluate
 
 # Tricks
 
